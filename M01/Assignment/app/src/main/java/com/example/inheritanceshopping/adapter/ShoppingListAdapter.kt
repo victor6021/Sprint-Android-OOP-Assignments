@@ -9,8 +9,9 @@ import com.example.inheritanceshopping.R
 import com.example.inheritanceshopping.model.ShoppingItem
 import kotlinx.android.synthetic.main.shopping_list_layout.view.*
 
-class ShoppingListAdapter(val shopping: MutableList<ShoppingItem>):
+class ShoppingListAdapter(val shopping: ArrayList<ShoppingItem>):
         RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>(){
+
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val name: TextView = view.text_view_name
     }

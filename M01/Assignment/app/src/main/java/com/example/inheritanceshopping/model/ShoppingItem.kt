@@ -1,44 +1,73 @@
 package com.example.inheritanceshopping.model
 
 import android.util.Log
-import com.example.inheritanceshopping.R
 
 open class ShoppingItem(val colorId: Int, val productName: String){
     val returnDisplayName = "$productName"
     open fun getDisplayName(): String{
-        return "$returnDisplayName"
+        return "$returnDisplayName, \n" +
+                "Color ID = $colorId"
     }
 }
 
 class food(colorId: Int, productName: String):ShoppingItem(colorId, productName) {
-    val foodColorId:Int = R.color.foodColor
     fun getFood(){
         Log.i("food","buying food")
     }
 
     override fun getDisplayName(): String {
-        return "$returnDisplayName, \nmust be refrigerated"
+        return "$returnDisplayName, \nmust be refrigerated, \n" +
+                "Color ID = $colorId"
     }
 }
 
 class clothing(colorId: Int, productName: String):ShoppingItem(colorId, productName){
-    val clothingColorId: Int = R.color.clothingColor
     fun getClothing(){
         Log.i("clothing","buying cloth")
     }
 
     override fun getDisplayName(): String {
-        return "$returnDisplayName, \nSize M"
+        return "$returnDisplayName, \nSize M, \n" +
+                "Color ID = $colorId"
     }
 }
 
 class electronic(colorId: Int, productName: String):ShoppingItem(colorId, productName){
-    val electronicColorId: Int = R.color.electronicColor
     fun getElectronic(){
         Log.i("electronic","buying electronic")
     }
 
     override fun getDisplayName(): String {
-        return "$returnDisplayName, \nNeed delivery"
+        return "$returnDisplayName, \nNeed delivery, \n" +
+                "Color ID = $colorId"
     }
 }
+
+object shoppingData: ArrayList<ShoppingItem>(
+    arrayListOf(
+        food(
+            productName = "Banana",
+            colorId = 1
+        ),
+        food(
+            productName = "Apple",
+            colorId = 1
+        ),
+        clothing(
+            productName = "T-Shirt",
+            colorId = 2
+        ),
+        clothing(
+            productName = "Jean",
+            colorId = 2
+        ),
+        electronic(
+            productName = "Television",
+            colorId = 3
+        ),
+        electronic(
+            productName = "Computer",
+            colorId = 3
+        )
+    )
+)
