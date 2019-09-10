@@ -15,8 +15,8 @@ abstract class Vehicle(
 
 }
 
-data class Bus(override val id: String, override val weight: Int):Vehicle(){
-    private fun drive() {
+data class Bus(override val id: String, override val weight: Int):Vehicle(),GroundTravel{
+    override fun drive() {
 
     }
 
@@ -25,8 +25,8 @@ data class Bus(override val id: String, override val weight: Int):Vehicle(){
     }
 }
 
-class Taxi(override val id: String, override val weight: Int):Vehicle(){
-    private fun drive(){
+data class Taxi(override val id: String, override val weight: Int):Vehicle(),GroundTravel{
+    override fun drive(){
 
     }
     override fun travel(): String {
@@ -34,8 +34,8 @@ class Taxi(override val id: String, override val weight: Int):Vehicle(){
     }
 }
 
-class Ship(override val id: String, override val weight: Int):Vehicle(){
-    private fun sail(){
+data class Ship(override val id: String, override val weight: Int):Vehicle(),WaterTravel{
+    override fun sail(){
 
     }
     override fun travel(): String {
@@ -43,8 +43,8 @@ class Ship(override val id: String, override val weight: Int):Vehicle(){
     }
 }
 
-class Boat(override val id: String, override val weight: Int):Vehicle(){
-    private fun sail(){
+data class Boat(override val id: String, override val weight: Int):Vehicle(),WaterTravel{
+    override fun sail(){
 
     }
     override fun travel(): String {
@@ -52,8 +52,8 @@ class Boat(override val id: String, override val weight: Int):Vehicle(){
     }
 }
 
-class Airplane(override val id: String, override val weight: Int):Vehicle(){
-    private fun fly(){
+data class Airplane(override val id: String, override val weight: Int):Vehicle(),AirTravel{
+    override fun fly(){
 
     }
     override fun travel(): String {
@@ -61,8 +61,8 @@ class Airplane(override val id: String, override val weight: Int):Vehicle(){
     }
 }
 
-class Helicopter(override val id: String, override val weight: Int):Vehicle(){
-    private fun fly(){
+data class Helicopter(override val id: String, override val weight: Int):Vehicle(),AirTravel{
+    override fun fly(){
 
     }
     override fun travel(): String {
