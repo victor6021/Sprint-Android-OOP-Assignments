@@ -1,7 +1,5 @@
 package com.example.interfaces.model
 
-interface AirTravel {
-    fun fly(): String{
-
-    }
+interface AirTravel{
+    fun fly()
 }
