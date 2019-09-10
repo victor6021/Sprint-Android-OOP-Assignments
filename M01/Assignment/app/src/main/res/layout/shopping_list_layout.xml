@@ -24,7 +24,7 @@
             app:layout_constraintEnd_toStartOf="@id/text_view_colorId"/>
 
         <TextView
-            android:text="colorid"
+            android:text="colorId"
             android:id="@+id/text_view_colorId"
             android:textSize="12sp"
             android:layout_width="wrap_content"
