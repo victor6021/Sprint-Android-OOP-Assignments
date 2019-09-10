@@ -1,47 +1,70 @@
 package com.example.interfaces.model
 
+import java.io.Serializable
+
 abstract class Vehicle(
-    open val id: String,
-    open val weight: Int,
-    open val favorite: Boolean): AirTravel, WaterTravel, GroundTravel {
+    open val id: String? = null,
+    open val weight: Int? = null,
+    open val favorite: Boolean = false):Serializable {
 
-    open fun travel():String{
-        return "$id,$weight"
+    open fun travel():String = " Vehicle"
+
+    override fun toString(): String {
+        return "Vehicle(id = $id, weight = $weight"
     }
 
 }
 
-abstract class bus(id: String, weight: Int, favorite: Boolean):Vehicle(id,weight,favorite){
+data class Bus(override val id: String, override val weight: Int):Vehicle(){
+    private fun drive() {
+
+    }
+
     override fun travel(): String {
         return "$id travels via ${drive()}"
     }
 }
 
-abstract class taxi(id: String, weight: Int, favorite: Boolean):Vehicle(id,weight,favorite){
+class Taxi(override val id: String, override val weight: Int):Vehicle(){
+    private fun drive(){
+
+    }
     override fun travel(): String {
         return "$id travels via ${drive()}"
     }
 }
 
-abstract class ship(id: String, weight: Int, favorite: Boolean):Vehicle(id,weight,favorite){
+class Ship(override val id: String, override val weight: Int):Vehicle(){
+    private fun sail(){
+
+    }
     override fun travel(): String {
         return "$id travels via ${sail()}"
     }
 }
 
-abstract class boat(id: String, weight: Int, favorite: Boolean):Vehicle(id,weight,favorite){
+class Boat(override val id: String, override val weight: Int):Vehicle(){
+    private fun sail(){
+
+    }
     override fun travel(): String {
         return "$id travels via ${sail()}"
     }
 }
 
-abstract class airplane(id: String, weight: Int, favorite: Boolean):Vehicle(id,weight,favorite){
+class Airplane(override val id: String, override val weight: Int):Vehicle(){
+    private fun fly(){
+
+    }
     override fun travel(): String {
         return "$id travels via ${fly()}"
     }
 }
 
-abstract class helicopter(id: String, weight: Int, favorite: Boolean):Vehicle(id,weight,favorite){
+class Helicopter(override val id: String, override val weight: Int):Vehicle(){
+    private fun fly(){
+
+    }
     override fun travel(): String {
         return "$id travels via ${fly()}"
     }
