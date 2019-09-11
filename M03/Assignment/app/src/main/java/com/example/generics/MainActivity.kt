@@ -31,4 +31,10 @@ class MainActivity : AppCompatActivity() {
         theList.add(p)
         return theList
     }
+    
+    override fun onStart(){
+        super.onStart()
+        val male = peopleList("Tom")
+        val female = peopleList(1)
+    }
 }
