@@ -16,7 +16,11 @@ class GenericsAPIOperations : AppCompatActivity() {
 
         val observable = Observable.just(1,2,3)
 
+        observable.subscribe(){int -> println("This observable returned $int")}
+
         val personObservable = Observable.just(TomCruise(),BradPitt())
+
+        personObservable.subscribe(){person -> println("This observable returned $person")}
     }
 
     open class Person
