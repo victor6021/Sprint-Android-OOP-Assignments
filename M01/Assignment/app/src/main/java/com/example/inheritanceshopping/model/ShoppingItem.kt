@@ -2,6 +2,8 @@ package com.example.inheritanceshopping.model
 
 import android.util.Log
 
+data class ShoppingJson(val productName: String,val colorId: Int)
+
 open class ShoppingItem(val productName: String,val colorId: Int){
     val returnDisplayName = "$productName"
     open fun getDisplayName(): String{
@@ -9,7 +11,7 @@ open class ShoppingItem(val productName: String,val colorId: Int){
     }
 }
 
-class food(colorId: Int, productName: String):ShoppingItem(productName, colorId) {
+class food(productName: String,colorId: Int):ShoppingItem(productName, colorId) {
     fun getFood(){
         Log.i("food","buying food")
     }
@@ -19,7 +21,7 @@ class food(colorId: Int, productName: String):ShoppingItem(productName, colorId)
     }
 }
 
-class clothing(colorId: Int, productName: String):ShoppingItem(productName, colorId){
+class clothing(productName: String,colorId: Int):ShoppingItem(productName, colorId){
     fun getClothing(){
         Log.i("clothing","buying cloth")
     }
@@ -29,7 +31,7 @@ class clothing(colorId: Int, productName: String):ShoppingItem(productName, colo
     }
 }
 
-class electronic(colorId: Int, productName: String):ShoppingItem(productName, colorId){
+class electronic(productName: String,colorId: Int):ShoppingItem(productName, colorId){
     fun getElectronic(){
         Log.i("electronic","buying electronic")
     }
