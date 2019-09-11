@@ -12,5 +12,17 @@ class MainActivity : AppCompatActivity() {
 
         val person = mutableListOf("Tom", "Jerry", "May","John")
         person.add(1.toString())
+
+        class People<P>{
+
+            private var people:P? = null
+            fun get():P?{
+                return people
+            }
+
+            fun put(p:P){
+                people = p
+            }
+        }
     }
 }
