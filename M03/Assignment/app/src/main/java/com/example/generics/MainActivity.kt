@@ -1,6 +1,5 @@
 package com.example.generics
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -55,6 +54,10 @@ class MainActivity : AppCompatActivity() {
         var open = false
 
         fun fetch():M?{
+            println("movieCall1")
+            println("movieCall2")
+            println("movieCall3")
+            println("movieCall4")
             return movie.takeIf { open }
         }
     }
