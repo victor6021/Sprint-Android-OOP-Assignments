@@ -1,5 +1,6 @@
 package com.example.generics
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -48,7 +49,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun onResponse(call: Call<DummyNetworkAPI>, response: Response<DummyNetworkAPI>) {
-            Toast.makeText(this,)
+
+        }
+
+        var open = false
+
+        fun fetch():M?{
+            return movie.takeIf { open }
         }
     }
 }
