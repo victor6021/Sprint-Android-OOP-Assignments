@@ -25,4 +25,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    fun <P> peopleList(p:P): List<P>{
+        val theList = mutableListOf<P>()
+        theList.add(p)
+        return theList
+    }
 }
