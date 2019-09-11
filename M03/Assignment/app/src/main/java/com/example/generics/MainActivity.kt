@@ -3,6 +3,9 @@ package com.example.generics
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,6 +40,16 @@ class MainActivity : AppCompatActivity() {
         val male = peopleList("Tom")
         val number = peopleList(1)
         Toast.makeText(this,"$male, is number $number",Toast.LENGTH_SHORT).show()
+    }
+
+    class Box<M>(private var movie:M): Callback<DummyNetworkAPI>{
+        override fun onFailure(call: Call<DummyNetworkAPI>, t: Throwable) {
+
+        }
+
+        override fun onResponse(call: Call<DummyNetworkAPI>, response: Response<DummyNetworkAPI>) {
+            Toast.makeText(this,)
+        }
     }
 }
 
