@@ -3,6 +3,7 @@ package com.example.generics
 import android.app.Person
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -10,8 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val person = mutableListOf("Tom", "Jerry", "May","John")
-        person.add(1.toString())
+        val personList = mutableListOf("Tom", "Jerry", "May","John")
+        personList.add(1.toString())
 
         class People<P>{
 
@@ -31,10 +32,13 @@ class MainActivity : AppCompatActivity() {
         theList.add(p)
         return theList
     }
-    
+
     override fun onStart(){
         super.onStart()
         val male = peopleList("Tom")
-        val female = peopleList(1)
+        val number = peopleList(1)
+        Toast.makeText(this,"$male, is number $number",Toast.LENGTH_SHORT).show()
     }
+    
 }
+

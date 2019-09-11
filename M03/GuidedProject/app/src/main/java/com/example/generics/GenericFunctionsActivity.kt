@@ -29,12 +29,12 @@ class GenericFunctionsActivity : AppCompatActivity() {
     }
     class Ball
 
-    class Box<T>(private var item: T){
+    class Box<B>(private var item: B){
 
         var open = false
 //        private var item: T = item
 
-        fun fetch(): T?{
+        fun fetch(): B?{
             return item.takeIf { open }
         }
     }
