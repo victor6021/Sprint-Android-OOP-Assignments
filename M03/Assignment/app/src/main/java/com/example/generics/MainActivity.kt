@@ -1,6 +1,5 @@
 package com.example.generics
 
-import android.app.Person
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -39,6 +38,5 @@ class MainActivity : AppCompatActivity() {
         val number = peopleList(1)
         Toast.makeText(this,"$male, is number $number",Toast.LENGTH_SHORT).show()
     }
-    
 }
 
