@@ -1,4 +1,4 @@
-package com.example.android_sprint_networking_challenge.ui
+package com.example.android_sprint_networking_challenge.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
