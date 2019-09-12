@@ -1,7 +1,5 @@
 package com.example.android_sprint_networking_challenge.viewModel
 
-import android.content.Context
-import android.widget.EditText
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 import com.example.android_sprint_networking_challenge.model.Pokemon

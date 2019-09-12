@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
         fun refreshList(){
             layout.removeAllViews()
             for((counter, pokemon) in pokemonList.withIndex()){
