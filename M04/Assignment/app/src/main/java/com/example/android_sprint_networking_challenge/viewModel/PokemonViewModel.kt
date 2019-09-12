@@ -7,6 +7,7 @@ import com.example.android_sprint_networking_challenge.model.Pokemon
 class PokemonViewModel: BaseObservable() {
 
     private var pokemon: Pokemon = Pokemon("","","","","")
+    private val search = "Searching"
 
     @Bindable
     fun getName(): String?{
@@ -31,5 +32,9 @@ class PokemonViewModel: BaseObservable() {
     @Bindable
     fun getTypes(): String?{
         return pokemon.types
+    }
+
+    fun handleViewDetailClicked(){
+        search
     }
 }
