@@ -34,7 +34,7 @@ class DetailsActivity : AppCompatActivity(), Callback<Pokemon> {
 
         val input = intent.getStringExtra("value")
             getPokemon()
-            getPokemonById("id")
+            getPokemonById()
 
     }
 
@@ -42,8 +42,8 @@ class DetailsActivity : AppCompatActivity(), Callback<Pokemon> {
         pokemonService.getPokemon().enqueue(this)
     }
 
-    private fun getPokemonById(pokemonId: String){
-        pokemonService.getPokemonById(pokemonId).enqueue(this)
+    private fun getPokemonById(){
+        pokemonService.getPokemonById().enqueue(this)
     }
 
     private fun getPokemonAbility(pokemonAbility: String){
