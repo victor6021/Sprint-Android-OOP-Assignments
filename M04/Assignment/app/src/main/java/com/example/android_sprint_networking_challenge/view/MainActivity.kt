@@ -4,8 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import com.example.android_sprint_networking_challenge.R
 import com.example.android_sprint_networking_challenge.model.Pokemon
+import com.example.android_sprint_networking_challenge.viewModel.PokemonViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +16,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        // TODO 5: Update your MainActivity to use DataBindingUtil to show the UI, rather than the regular setContentView
+        val activityMainBinding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        activityMainBinding.viewModel = PokemonViewModel()
+                activityMainBinding.executePendingBindings()
 
         image_view_search.setOnClickListener {
             val value = edit_text.text
