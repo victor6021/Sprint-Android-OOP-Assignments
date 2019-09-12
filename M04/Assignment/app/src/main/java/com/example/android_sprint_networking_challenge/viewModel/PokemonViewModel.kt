@@ -6,15 +6,15 @@ import com.example.android_sprint_networking_challenge.model.Pokemon
 
 class PokemonViewModel: BaseObservable() {
 
-    private var pokemon: Pokemon = Pokemon("","".toInt(),"","","")
+    private var pokemon: Pokemon = Pokemon("","","","","")
 
     @Bindable
-    fun getPokemon(): String?{
+    fun getName(): String?{
         return pokemon.name
     }
 
     @Bindable
-    fun getId(): Int?{
+    fun getId(): String?{
         return pokemon.id
     }
 

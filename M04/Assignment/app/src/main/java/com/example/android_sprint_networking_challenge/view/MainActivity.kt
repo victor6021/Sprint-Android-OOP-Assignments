@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import com.example.android_sprint_networking_challenge.R
+import com.example.android_sprint_networking_challenge.databinding.ActivityMainBinding
 import com.example.android_sprint_networking_challenge.model.Pokemon
 import com.example.android_sprint_networking_challenge.viewModel.PokemonViewModel
 import kotlinx.android.synthetic.main.activity_main.*
